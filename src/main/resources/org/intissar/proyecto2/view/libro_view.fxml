@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="10" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.intissar.proyecto2.controller.LibroController">
+   <HBox prefHeight="51.0" prefWidth="697.0">
+      <children>
+           <ComboBox fx:id="idiomaComboBox" onAction="#cambiarIdioma">
+               <items>
+                   <FXCollections fx:factory="observableArrayList">
+                       <String fx:value="Español" />
+                       <String fx:value="English" />
+                   </FXCollections>
+               </items>
+           </ComboBox>
+           <Button fx:id="helpButton" onAction="#abrirAyuda" text="Help" />
+           <Button fx:id="MenuButton" onAction="#irAmenu" text="Menu">
+               <tooltip>
+               <Tooltip text="volver al menu " />
+            </tooltip>
+           </Button>
+           <Button fx:id="informeButton" onAction="#generarInforme" text="Generar Informe" />
+      </children>
+   </HBox>
+
+          <Label prefHeight="44.0" prefWidth="178.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Gestión de Libros" />
+
+    <HBox spacing="10">
+        <TextField fx:id="tituloField" promptText="Título" />
+        <TextField fx:id="autorField" promptText="Autor" />
+        <TextField fx:id="editorialField" promptText="Editorial" />
+        <ComboBox fx:id="estadoComboBox" promptText="Estado">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Nuevo" />
+                    <String fx:value="Usado nuevo" />
+                    <String fx:value="Usado seminuevo" />
+                    <String fx:value="Usado estropeado" />
+                    <String fx:value="Restaurado" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button onAction="#agregarLibro" text="Agregar Libro" />
+        <Button onAction="#modificarLibro" text="Modificar Libro" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Button onAction="#eliminarLibro" text="Eliminar Libro" />
+        <Button onAction="#mostrarLibrosDadosDeBaja" text="Ver Libros Dados de Baja" />
+        <Button onAction="#reactivarLibro" text="Reactivar Libro" />
+        <Button onAction="#marcarBajaLibro" text="Marcar como Baja" />
+    </HBox>
+
+    <TableView fx:id="librosTable" prefHeight="300" prefWidth="500">
+        <columns>
+            <TableColumn fx:id="codigoColumn" text="Código" />
+            <TableColumn fx:id="tituloColumn" text="Título" />
+            <TableColumn fx:id="autorColumn" text="Autor" />
+            <TableColumn fx:id="estadoColumn" text="Estado" />
+        </columns>
+    </TableView>
+
+</VBox>
