@@ -136,7 +136,18 @@
                     </options>
                 </configuration>
             </plugin>
-
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.10.0</version> <!-- Asegúrate de usar la versión más reciente -->
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>javadoc</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <!-- Plugin Shade para JAR ejecutable -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -155,7 +166,11 @@
                                     <mainClass>org.intissar.proyecto2.Main</mainClass>
                                 </transformer>
                             </transformers>
+
+                            <outputDirectory>${project.build.directory}/my-javadocs</outputDirectory>
+
                         </configuration>
+
                     </execution>
                 </executions>
             </plugin>
