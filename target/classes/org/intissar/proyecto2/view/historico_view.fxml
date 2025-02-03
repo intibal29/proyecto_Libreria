@@ -3,28 +3,38 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="464.0" prefWidth="1035.0" spacing="10" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.intissar.proyecto2.controller.HistoricoController">
-    <Label prefHeight="39.0" prefWidth="206.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Histórico de Préstamos" />
+<VBox alignment="CENTER" prefHeight="464.0" prefWidth="1035.0" spacing="10" stylesheets="@../styles/styles.css"
+      xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.intissar.proyecto2.controller.HistoricoController">
 
-    <!-- Filtros -->
+    <!-- 🔹 ComboBox para cambiar de idioma -->
     <HBox spacing="10">
-        <TextField fx:id="dniAlumnoField" promptText="DNI Alumno (opcional)" />
-        <TextField fx:id="codigoLibroField" promptText="Código Libro (opcional)" />
-        <DatePicker fx:id="fechaInicioPicker" promptText="Fecha inicio" />
-        <DatePicker fx:id="fechaFinPicker" promptText="Fecha fin" />
-        <Button onAction="#filtrarHistorico" text="Filtrar" />
-        <Button fx:id="MenuButton" onAction="#irAmenu" text="Menu" />
-
+        <ComboBox fx:id="idiomaComboBox" onAction="#cambiarIdioma" />
     </HBox>
 
-    <!-- Tabla -->
+    <!-- 🔹 Título -->
+    <Label fx:id="tituloLabel" prefHeight="39.0" prefWidth="206.0" style="-fx-font-size: 18px; -fx-font-weight: bold;"
+           text="%titulo.historico" />
+
+    <!-- 🔹 Filtros -->
+    <HBox spacing="10">
+        <TextField fx:id="dniAlumnoField" promptText="%placeholder.dniAlumno" />
+        <TextField fx:id="codigoLibroField" promptText="%placeholder.codigoLibro" />
+        <DatePicker fx:id="fechaInicioPicker" promptText="%placeholder.fechaInicio" />
+        <DatePicker fx:id="fechaFinPicker" promptText="%placeholder.fechaFin" />
+        <Button fx:id="filtrarHistoricoButton" onAction="#filtrarHistorico" text="%boton.filtrar" />
+        <Button fx:id="MenuButton" onAction="#irAmenu" text="%boton.menu" />
+    </HBox>
+
+    <!-- 🔹 Tabla -->
     <TableView fx:id="historicoTable" prefHeight="400" prefWidth="800">
         <columns>
-            <TableColumn fx:id="idPrestamoColumn" text="ID Préstamo" />
-            <TableColumn fx:id="dniAlumnoColumn" text="DNI Alumno" />
-            <TableColumn fx:id="codigoLibroColumn" text="Código Libro" />
-            <TableColumn fx:id="fechaPrestamoColumn" text="Fecha Préstamo" />
-            <TableColumn fx:id="fechaDevolucionColumn" text="Fecha Devolución" />
+            <TableColumn fx:id="idPrestamoColumn" text="%columna.idPrestamo" />
+            <TableColumn fx:id="dniAlumnoColumn" text="%columna.dniAlumno" />
+            <TableColumn fx:id="codigoLibroColumn" text="%columna.codigoLibro" />
+            <TableColumn fx:id="fechaPrestamoColumn" text="%columna.fechaPrestamo" />
+            <TableColumn fx:id="fechaDevolucionColumn" text="%columna.fechaDevolucion" />
         </columns>
     </TableView>
+
 </VBox>
