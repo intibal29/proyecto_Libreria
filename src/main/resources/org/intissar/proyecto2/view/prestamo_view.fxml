@@ -5,52 +5,56 @@
 
 <VBox alignment="TOP_CENTER" spacing="10" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.intissar.proyecto2.controller.PrestamoController">
 
+    <!-- 🔹 ComboBox para cambiar de idioma -->
+    <HBox spacing="10" />
+
     <!-- 🔹 Botones adicionales -->
     <HBox spacing="10">
-        <Button fx:id="helpButton" onAction="#abrirAyuda" text="Ayuda">
-            <tooltip><Tooltip text="Abrir la guía de ayuda" /></tooltip>
+        <ComboBox fx:id="idiomaComboBox" onAction="#cambiarIdioma" />
+        <Button fx:id="helpButton" onAction="#abrirAyuda" text="%boton.ayuda">
+            <tooltip><Tooltip text="%tooltip.ayuda" /></tooltip>
         </Button>
-        <Button fx:id="MenuButton" onAction="#irAmenu" text="Menu">
-            <tooltip><Tooltip text="volver al menu " /></tooltip>
+        <Button fx:id="MenuButton" onAction="#irAmenu" text="%boton.menu">
+            <tooltip><Tooltip text="%tooltip.menu" /></tooltip>
         </Button>
-        <Button fx:id="informeButton" onAction="#generarInforme" text="Generar Informe">
-            <tooltip><Tooltip text="Generar un informe de préstamos" /></tooltip>
+        <Button fx:id="informeButton" onAction="#generarInforme" text="%boton.generarInforme">
+            <tooltip><Tooltip text="%tooltip.generarInforme" /></tooltip>
         </Button>
     </HBox>
 
     <!-- 🔹 Título de la vista -->
-    <Label fx:id="tituloLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Gestión de Préstamos" />
+    <Label fx:id="tituloLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="%titulo.prestamos" />
 
     <!-- 🔹 Campos de entrada -->
     <HBox spacing="10">
-        <TextField fx:id="dniAlumnoField" promptText="DNI del Alumno" />
-        <TextField fx:id="codigoLibroField" promptText="Código del Libro" />
-        <DatePicker fx:id="fechaPrestamoPicker" promptText="Fecha del Préstamo" />
+        <TextField fx:id="dniAlumnoField" promptText="%placeholder.dniAlumno" />
+        <TextField fx:id="codigoLibroField" promptText="%placeholder.codigoLibro" />
+        <DatePicker fx:id="fechaPrestamoPicker" promptText="%placeholder.fechaPrestamo" />
     </HBox>
 
     <!-- 🔹 Botones con Tooltips -->
     <HBox spacing="10">
-        <Button fx:id="registrarPrestamoButton" onAction="#registrarPrestamo" text="Registrar Préstamo">
-            <tooltip><Tooltip text="Registrar un nuevo préstamo" /></tooltip>
+        <Button fx:id="registrarPrestamoButton" onAction="#registrarPrestamo" text="%boton.registrarPrestamo">
+            <tooltip><Tooltip text="%tooltip.registrarPrestamo" /></tooltip>
         </Button>
-        <Button fx:id="eliminarPrestamoButton" onAction="#eliminarPrestamo" text="Eliminar Préstamo">
-            <tooltip><Tooltip text="Eliminar el préstamo seleccionado" /></tooltip>
+        <Button fx:id="eliminarPrestamoButton" onAction="#eliminarPrestamo" text="%boton.eliminarPrestamo">
+            <tooltip><Tooltip text="%tooltip.eliminarPrestamo" /></tooltip>
         </Button>
-        <Button fx:id="devolverPrestamoButton" onAction="#devolverPrestamo" text="Devolver Préstamo">
-            <tooltip><Tooltip text="Devolver el préstamo seleccionado" /></tooltip>
+        <Button fx:id="devolverPrestamoButton" onAction="#devolverPrestamo" text="%boton.devolverPrestamo">
+            <tooltip><Tooltip text="%tooltip.devolverPrestamo" /></tooltip>
         </Button>
-        <Button fx:id="verHistoricoButton" onAction="#verHistorico" text="Ver Historial">
-            <tooltip><Tooltip text="Ver historial de préstamos" /></tooltip>
+        <Button fx:id="verHistoricoButton" onAction="#verHistorico" text="%boton.verHistorico">
+            <tooltip><Tooltip text="%tooltip.verHistorico" /></tooltip>
         </Button>
     </HBox>
 
     <!-- 🔹 Tabla de préstamos -->
     <TableView fx:id="prestamosTable" prefHeight="300" prefWidth="600">
         <columns>
-            <TableColumn fx:id="idPrestamoColumn" text="ID Préstamo" />
-            <TableColumn fx:id="dniAlumnoColumn" text="DNI del Alumno" />
-            <TableColumn fx:id="codigoLibroColumn" text="Código del Libro" />
-            <TableColumn fx:id="fechaPrestamoColumn" text="Fecha del Préstamo" />
+            <TableColumn fx:id="idPrestamoColumn" text="%columna.idPrestamo" />
+            <TableColumn fx:id="dniAlumnoColumn" text="%columna.dniAlumno" />
+            <TableColumn fx:id="codigoLibroColumn" text="%columna.codigoLibro" />
+            <TableColumn fx:id="fechaPrestamoColumn" text="%columna.fechaPrestamo" />
         </columns>
     </TableView>
 </VBox>

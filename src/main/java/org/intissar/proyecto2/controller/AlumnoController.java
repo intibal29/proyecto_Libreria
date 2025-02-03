@@ -116,8 +116,11 @@ public class AlumnoController {
                 alumnosTable.getSelectionModel().selectedItemProperty().isNull()
         );
 
-        idiomaComboBox.setItems(FXCollections.observableArrayList(SPANISH, ENGLISH));
-        idiomaComboBox.setOnAction(event -> cambiarIdioma());
+        idiomaComboBox.getItems().addAll("Español", "English");
+        idiomaComboBox.setValue(Main.getLocale().getLanguage().equals("en") ? "English" : "Español");
+
+        // Cargar textos desde el archivo de idiomas
+        actualizarTextos();
     }
     /**
      * Configura el ComboBox de idioma y su evento de cambio.
@@ -125,13 +128,17 @@ public class AlumnoController {
     @FXML
     private void cambiarIdioma() {
         String idiomaSeleccionado = idiomaComboBox.getSelectionModel().getSelectedItem();
+        Locale nuevoIdioma = idiomaSeleccionado.equals("English") ? new Locale("en") : new Locale("es");
 
-        if (SPANISH.equals(idiomaSeleccionado)) {
-            cambiarIdioma(new Locale("es"));
-        } else if (ENGLISH.equals(idiomaSeleccionado)) {
-            cambiarIdioma(new Locale("en"));
-        }
+        // Cambiar el idioma global en Main SIN recargar la vista
+        Main.cambiarIdioma(nuevoIdioma, false);
+
+        // Actualizar los textos en la UI sin recargar la vista
+        actualizarTextos();
     }
+
+
+
     /**
      * Asigna los textos de los botones e inputs desde el archivo de recursos (Bundle)
      * de acuerdo con el idioma seleccionado.
@@ -154,31 +161,64 @@ public class AlumnoController {
      * Se actualiza el `locale` con el nuevo idioma seleccionado, se carga el archivo de recursos correspondiente,
      * y se recarga la vista para aplicar los cambios visuales en la interfaz de usuario.
      */
-    private void cambiarIdioma(Locale nuevaLocale) {
-        locale = nuevaLocale;
-        bundle = ResourceBundle.getBundle("org.intissar.proyecto2.languages.lang", locale);
-        recargarVista();
-        asignarTextosDesdeBundle();
-    }
+
     /**
      * Recarga la vista actual para aplicar el idioma seleccionado.
      */
     private void recargarVista() {
         try {
-            Node currentNode = alumnosTable.getScene().getRoot();
-            Stage stage = (Stage) currentNode.getScene().getWindow();
+            // Obtener cualquier nodo de la interfaz
+            Parent root = FXMLLoader.load(getClass().getResource("/org/intissar/proyecto2/view/alumno_view.fxml"), Main.getBundle());
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/intissar/proyecto2/view/alumno_view.fxml"), bundle);
-            Parent root = loader.load();
+            // Verificar que el nodo de la interfaz tiene una escena y obtener el Stage
+            if (alumnosTable != null && alumnosTable.getScene() != null) {
+                Stage stage = (Stage) alumnosTable.getScene().getWindow();
+                if (stage != null) {
+                    Scene scene = new Scene(root);
+                    stage.setScene(scene);
+                    stage.setTitle(Main.getBundle().getString("titulo.alumnos"));
+                    stage.show();
+                    System.out.println("🔄 Vista recargada correctamente con idioma: " + Main.getLocale());
+                } else {
+                    System.err.println("❌ Error: No se pudo obtener el Stage desde alumnosTable.");
+                }
+            } else {
+                System.err.println("❌ Error: No se pudo obtener el Stage porque alumnosTable es null o no tiene escena.");
+            }
 
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.setTitle(bundle.getString("titulo"));
-            stage.show();
         } catch (IOException e) {
             e.printStackTrace();
+            System.err.println("❌ Error al recargar la vista: " + e.getMessage());
         }
     }
+
+    private void actualizarTextos() {
+        ResourceBundle bundle = Main.getBundle(); // Obtener el bundle actual desde Main
+
+        // Actualizar los textos de los botones
+        agregarButton.setText(bundle.getString("boton.agregarAlumno"));
+        modificarButton.setText(bundle.getString("boton.modificarAlumno"));
+        eliminarButton.setText(bundle.getString("boton.eliminarAlumno"));
+       // btnGenerarInforme.setText(bundle.getString("boton.generarInforme"));
+       // MenuButton.setText(bundle.getString("boton.menu"));
+       // helpButton.setText(bundle.getString("boton.ayuda"));
+
+        // Actualizar los placeholders de los TextFields
+        buscarField.setPromptText(bundle.getString("placeholder.buscarAlumno"));
+        dniField.setPromptText(bundle.getString("placeholder.dni"));
+        nombreField.setPromptText(bundle.getString("placeholder.nombre"));
+        apellido1Field.setPromptText(bundle.getString("placeholder.apellido1"));
+        apellido2Field.setPromptText(bundle.getString("placeholder.apellido2"));
+
+        // Actualizar los textos de las columnas de la tabla
+        dniColumn.setText(bundle.getString("columna.dni"));
+        nombreColumn.setText(bundle.getString("columna.nombre"));
+        apellido1Column.setText(bundle.getString("columna.apellido1"));
+        apellido2Column.setText(bundle.getString("columna.apellido2"));
+    }
+
+
+
     /**
      * Carga la lista de alumnos desde la base de datos y los muestra en la tabla.
      */
@@ -376,35 +416,10 @@ public class AlumnoController {
 
     @FXML
     public void irAmenu(ActionEvent actionEvent) {
-        try {
-            InputStream fxmlStream = getClass().getResourceAsStream("/org/intissar/proyecto2/view/inicio.fxml");
-            if (fxmlStream == null) {
-                throw new IOException("Archivo FXML no encontrado.");
-            }
-            Parent root = new FXMLLoader().load(fxmlStream);
-
-
-            // Cargar el archivo FXML
-
-
-            // Obtener el Stage actual desde el evento del botón
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-
-            // Crear la nueva escena
-            Scene scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("/org/intissar/proyecto2/styles/styles.css").toExternalForm());
-
-            // Configurar la nueva escena en el Stage
-            stage.setScene(scene);
-            stage.setTitle("Menú Principal");
-            stage.setResizable(false);
-            stage.show();
-
-            logger.info("✅ Menú principal cargado correctamente desde: {}");
-
-        } catch (IOException e) {
-            logger.error("❌ Error al cargar la vista FXML: ", e);
-        }
+        logger.info("🔄 Volviendo al menú principal...");
+        Main.cargarVista("/org/intissar/proyecto2/view/inicio.fxml");
     }
+
+
 
 }

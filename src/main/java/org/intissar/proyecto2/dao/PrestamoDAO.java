@@ -84,18 +84,29 @@ public class PrestamoDAO {
      * @return true si el préstamo fue eliminado, false en caso contrario.
      * @throws SQLException si ocurre un error al eliminar el préstamo.
      */
-    // Eliminar un préstamo por ID (no borramos, solo lo desmarcamos)
     public boolean eliminarPrestamo(int idPrestamo) throws SQLException {
         String query = "DELETE FROM Prestamo WHERE id_prestamo = ?";
-        try (PreparedStatement stmt = connection.prepareStatement(query)) {
+        try (Connection conn = DBConnection.getConnection(); // ✅ Nueva conexión
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
             stmt.setInt(1, idPrestamo);
             int rowsAffected = stmt.executeUpdate();
+
+            if (rowsAffected > 0) {
+                logger.info("✅ Préstamo eliminado con éxito. ID: " + idPrestamo);
+            } else {
+                logger.info("⚠ No se eliminó ningún préstamo. Verifica si el ID existe.");
+            }
             return rowsAffected > 0;
+
         } catch (SQLException e) {
-            logger.log(Level.SEVERE, "Error al eliminar el préstamo con ID: " + idPrestamo, e);
-            throw new SQLException("Error al eliminar el préstamo con ID: " + idPrestamo, e);
+            logger.info("❌ Error al eliminar el préstamo con ID: " + e);
+            throw e;
         }
     }
+
+
+
     /**
      * Obtiene una lista de préstamos activos en la base de datos.
      *

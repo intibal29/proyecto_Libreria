@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.intissar.proyecto2.Main;
 import org.intissar.proyecto2.dao.HistoricoPrestamoDAO;
 import org.intissar.proyecto2.model.HistoricoPrestamo;
 
@@ -15,6 +16,10 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+import org.intissar.proyecto2.model.Prestamo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,6 +44,14 @@ public class HistoricoController {
     @FXML private TableColumn<HistoricoPrestamo, Integer> codigoLibroColumn;
     @FXML private TableColumn<HistoricoPrestamo, LocalDate> fechaPrestamoColumn;
     @FXML private TableColumn<HistoricoPrestamo, LocalDate> fechaDevolucionColumn;
+
+
+    @FXML
+    private ComboBox<String> idiomaComboBox;
+    @FXML
+    private Label tituloLabel;
+    @FXML
+    private Button filtrarHistoricoButton, MenuButton;
 
     private final HistoricoPrestamoDAO historicoDAO;
 
@@ -65,8 +78,42 @@ public class HistoricoController {
 
         // Cargar todos los préstamos sin filtros al inicio
         cargarHistorico(null, null, null, null);
-    }
+        // Configurar opciones de idioma
+        idiomaComboBox.getItems().addAll("Español", "English");
+        idiomaComboBox.setValue(Main.getLocale().getLanguage().equals("en") ? "English" : "Español");
+        idiomaComboBox.setOnAction(event -> cambiarIdioma());
 
+        // Cargar textos desde el archivo de idiomas
+        actualizarTextos();
+    }
+    @FXML
+    private void cambiarIdioma() {
+        String idiomaSeleccionado = idiomaComboBox.getSelectionModel().getSelectedItem();
+        Locale nuevoIdioma = idiomaSeleccionado.equals("English") ? new Locale("en") : new Locale("es");
+
+        // Cambiar el idioma global en Main SIN recargar la vista
+        Main.cambiarIdioma(nuevoIdioma, false);
+
+        // Actualizar los textos en la UI sin recargar la vista
+        actualizarTextos();
+    }
+    private void actualizarTextos() {
+        ResourceBundle bundle = Main.getBundle();
+
+        // Actualizar título
+        if (tituloLabel != null) tituloLabel.setText(bundle.getString("titulo.historico"));
+
+        // Actualizar botones
+        if (filtrarHistoricoButton != null) filtrarHistoricoButton.setText(bundle.getString("boton.filtrar"));
+        if (MenuButton != null) MenuButton.setText(bundle.getString("boton.menu"));
+
+        // Actualizar columnas de la tabla
+        if (idPrestamoColumn != null) idPrestamoColumn.setText(bundle.getString("columna.idPrestamo"));
+        if (dniAlumnoColumn != null) dniAlumnoColumn.setText(bundle.getString("columna.dniAlumno"));
+        if (codigoLibroColumn != null) codigoLibroColumn.setText(bundle.getString("columna.codigoLibro"));
+        if (fechaPrestamoColumn != null) fechaPrestamoColumn.setText(bundle.getString("columna.fechaPrestamo"));
+        if (fechaDevolucionColumn != null) fechaDevolucionColumn.setText(bundle.getString("columna.fechaDevolucion"));
+    }
     /**
      * Carga el historial de préstamos con los filtros aplicados.
      *
@@ -128,24 +175,8 @@ public class HistoricoController {
      *
      * @param actionEvent Evento de acción que desencadena la navegación.
      */
+    @FXML
     public void irAmenu(ActionEvent actionEvent) {
-        try {
-            // Cargar el archivo FXML
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/intissar/proyecto2/view/inicio.fxml"));
-            Parent root = loader.load();
-
-            // Obtener la escena actual y el Stage
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-
-            // Configurar la nueva escena con la vista de inicio
-            stage.setScene(new Scene(root));
-            stage.show();
-
-            logger.info("Menú principal cargado correctamente.");
-
-        } catch (IOException e) {
-            logger.error("Error al cargar el menú principal:", e);
-            mostrarError("No se pudo cargar el menú principal.");
-        }
+        Main.cargarVista("/org/intissar/proyecto2/view/inicio.fxml");
     }
 }

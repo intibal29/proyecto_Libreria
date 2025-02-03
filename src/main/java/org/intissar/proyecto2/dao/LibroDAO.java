@@ -40,7 +40,8 @@ public class LibroDAO {
     // Obtener libros, con opción de incluir dados de baja
     public List<Libro> obtenerLibros(boolean incluirBaja) throws SQLException {
         List<Libro> libros = new ArrayList<>();
-        String query = incluirBaja ? "SELECT * FROM Libro" : "SELECT * FROM Libro WHERE baja = false";
+        String query = incluirBaja ? "SELECT Codigo, Titulo, Autor, Editorial, Estado, Baja FROM Libro"
+                : "SELECT Codigo, Titulo, Autor, Editorial, Estado, Baja FROM Libro WHERE Baja = 0";
 
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query);
@@ -159,14 +160,28 @@ public class LibroDAO {
      * @param codigo El código del libro a eliminar.
      * @throws SQLException Si ocurre un error durante la eliminación.
      */
-    public void eliminarLibro(int codigo) throws SQLException {
+    public boolean eliminarLibro(int codigo) throws SQLException {
         String query = "DELETE FROM Libro WHERE codigo = ?";
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query)) {
+
             stmt.setInt(1, codigo);
-            stmt.executeUpdate();
+            int rowsAffected = stmt.executeUpdate();
+
+            if (rowsAffected > 0) {
+                logger.info(" Libro eliminado correctamente. Código: {}");
+                return true;
+            } else {
+                logger.warning("⚠ No se encontró el libro con código: {} para eliminar.");
+                return false;
+            }
+
+        } catch (SQLException e) {
+            logger.info(" Error al eliminar el libro con código: {}");
+            throw new SQLException("Error al eliminar el libro con código: " + codigo, e);
         }
     }
+
     /**
      * Modifica los datos de un libro existente.
      *
@@ -335,12 +350,13 @@ public class LibroDAO {
     // Mapear ResultSet a objeto Libro
     private Libro mapearLibro(ResultSet rs) throws SQLException {
         return new Libro(
-                rs.getInt("codigo"),
+                rs.getInt("Codigo"),
                 rs.getString("Titulo"),
                 rs.getString("Autor"),
                 rs.getString("Editorial"),
                 rs.getString("Estado"),
-                rs.getBoolean("Baja ")
+                rs.getBoolean("Baja")
         );
+
     }
 }

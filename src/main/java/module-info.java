@@ -9,7 +9,8 @@ module org.intissar.proyecto2 {
     requires java.sql;
     requires itextpdf;
     requires org.slf4j;
-    requires jasperreports; // Módulo de SLF4J para logs
+    requires jasperreports;
+    requires kotlin.stdlib; // Módulo de SLF4J para logs
    // requires org.jfree.chart; // Módulo para gráficos con JFreeChart
     opens org.intissar.proyecto2 to javafx.fxml; // Esto permite que JavaFX acceda a los controladores
 

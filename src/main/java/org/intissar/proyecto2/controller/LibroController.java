@@ -10,8 +10,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import org.intissar.proyecto2.Main;
 import org.intissar.proyecto2.dao.LibroDAO;
 import org.intissar.proyecto2.model.Libro;
 
@@ -32,25 +34,23 @@ public class LibroController {
      */
     private static final Logger logger = LoggerFactory.getLogger(LibroController.class);
 
-        @FXML
-        private TextField tituloField, autorField, editorialField;
-        @FXML
-        private ComboBox<String> estadoComboBox;
-        @FXML
-        private TableView<Libro> librosTable;
-        @FXML
-        private TableColumn<Libro, Integer> codigoColumn;
-        @FXML
-        private TableColumn<Libro, String> tituloColumn, autorColumn, estadoColumn;
+    @FXML
+    private TextField tituloField, autorField, editorialField;
+    @FXML
+    private ComboBox<String> estadoComboBox, idiomaComboBox;
+    @FXML
+    private TableView<Libro> librosTable;
+    @FXML
+    private TableColumn<Libro, Integer> codigoColumn;
+    @FXML
+    private TableColumn<Libro, String> tituloColumn, autorColumn, estadoColumn;
 
-        @FXML private Label tituloLabel, labelIdioma;
+    // Etiquetas y botones
+    @FXML private Label tituloLabel;
+    @FXML private Button agregarLibroButton, modificarLibroButton, eliminarLibroButton,
+            verBajaButton, reactivarLibroButton, helpButton, informeButton, MenuButton;
 
-        @FXML private ComboBox<String>  idiomaComboBox;
-
-        @FXML private Button agregarLibroButton, modificarLibroButton, marcarBajaLibroButton,
-                eliminarLibroButton, verBajaButton, reactivarLibroButton, helpButton, informeButton;
-
-        private Locale locale = new Locale("es"); // Idioma predeterminado (Español)
+    private Locale locale = new Locale("es"); // Idioma predeterminado (Español)
         private ResourceBundle bundle;
 
         private ObservableList<Libro> librosList;
@@ -65,62 +65,103 @@ public class LibroController {
     /**
      * Inicializa la vista configurando elementos UI y cargando la lista de libros.
      */
-        @FXML
-        public void initialize() {
-            // 📌 Configurar idioma predeterminado
-
-            // 📌 Configurar ComboBox de idioma
-            idiomaComboBox.setItems(FXCollections.observableArrayList("Español", "English"));
-            idiomaComboBox.setValue("Español");
-            librosList = FXCollections.observableArrayList(); // 🔹 Se inicializa aquí para evitar NullPointerException
-            librosTable.setItems(librosList); // 🔹 Se asigna a la tabla para evitar errores
-
-            cargarLibros(); // 🔹 Se carga la lista de libros
-            // Inicializar la lista observable
-            librosList = FXCollections.observableArrayList();
-
-            // Configurar ComboBox con los estados disponibles
-            estadoComboBox.setItems(FXCollections.observableArrayList(
-                    "Nuevo", "Usado nuevo", "Usado seminuevo", "Usado estropeado", "Restaurado"
-            ));
-
-            // Configurar columnas de la tabla
-            codigoColumn.setCellValueFactory(cellData -> cellData.getValue().codigoProperty().asObject());
-            tituloColumn.setCellValueFactory(cellData -> cellData.getValue().tituloProperty());
-            autorColumn.setCellValueFactory(cellData -> cellData.getValue().autorProperty());
-            estadoColumn.setCellValueFactory(cellData -> cellData.getValue().estadoProperty());
-            // Asignar la lista observable a la tabla
-            librosTable.setItems(librosList);
-            idiomaComboBox.setItems(FXCollections.observableArrayList("Español", "English"));
-            idiomaComboBox.setValue("Español");
-            idiomaComboBox.setOnAction(event -> cambiarIdioma());
-
-            // Cargar el idioma por defecto
-            cargarLibros();
-
+    @FXML
+    public void initialize() {
+        // Verificar que los elementos de la UI no sean null
+        if (idiomaComboBox == null || tituloLabel == null || agregarLibroButton == null) {
+            System.err.println("⚠ Warning: Algunos elementos UI son null. Verifica que el fx:id coincida en libro_view.fxml.");
+            return;
         }
+        // Configurar ComboBox de idioma
+        idiomaComboBox.getItems().addAll("Español", "English");
+        idiomaComboBox.setValue(Main.getLocale().getLanguage().equals("en") ? "English" : "Español");
+        idiomaComboBox.setOnAction(event -> cambiarIdioma());
+
+        // Cargar textos desde el archivo de idiomas
+        actualizarTextos();
+
+        // Configurar ComboBox con los estados disponibles
+        if (estadoComboBox != null) {
+            estadoComboBox.setItems(FXCollections.observableArrayList(
+                    bundle.getString("estado.nuevo"),
+                    bundle.getString("estado.usadoNuevo"),
+                    bundle.getString("estado.usadoSeminuevo"),
+                    bundle.getString("estado.usadoEstropeado"),
+                    bundle.getString("estado.restaurado")
+            ));
+        }
+
+
+        // Configurar columnas de la tabla
+        codigoColumn.setCellValueFactory(new PropertyValueFactory<>("codigo"));
+        tituloColumn.setCellValueFactory(new PropertyValueFactory<>("titulo"));
+        autorColumn.setCellValueFactory(new PropertyValueFactory<>("autor"));
+        estadoColumn.setCellValueFactory(new PropertyValueFactory<>("estado"));
+
+        librosList = FXCollections.observableArrayList();
+        librosTable.setItems(librosList);
+
+        cargarLibros();
+    }
 
     /**
      * Cambia el idioma de la interfaz basado en la selección del ComboBox.
      */
     @FXML
     private void cambiarIdioma() {
-            String seleccion = idiomaComboBox.getValue();
-            locale = seleccion.equals("English") ? new Locale("en") : new Locale("es");
-            bundle = ResourceBundle.getBundle("i18n.messages", locale);
+        String idiomaSeleccionado = idiomaComboBox.getSelectionModel().getSelectedItem();
+        Locale nuevoIdioma = idiomaSeleccionado.equals("English") ? new Locale("en") : new Locale("es");
 
-            actualizarInterfaz();
+        // Cambiar el idioma global en Main SIN recargar la vista
+        Main.cambiarIdioma(nuevoIdioma, false);
+
+        // Actualizar los textos en la UI sin recargar la vista
+        actualizarTextos();
     }
     /**
      * Actualiza los textos de la interfaz según el idioma seleccionado.
      */
-    private void actualizarInterfaz() {
-        tituloLabel.setText(bundle.getString("titulo"));
-        labelIdioma.setText(bundle.getString("idioma"));
-        agregarLibroButton.setText(bundle.getString("agregar"));
-        modificarLibroButton.setText(bundle.getString("modificar"));
-        eliminarLibroButton.setText(bundle.getString("eliminar"));
+    private void actualizarTextos() {
+        ResourceBundle bundle = Main.getBundle();
+
+        // Actualizar título
+        if (tituloLabel != null) tituloLabel.setText(bundle.getString("titulo.libros"));
+
+        // Actualizar botones
+        if (agregarLibroButton != null) agregarLibroButton.setText(bundle.getString("boton.agregarLibro"));
+        if (modificarLibroButton != null) modificarLibroButton.setText(bundle.getString("boton.modificarLibro"));
+        if (eliminarLibroButton != null) eliminarLibroButton.setText(bundle.getString("boton.eliminarLibro"));
+        if (verBajaButton != null) verBajaButton.setText(bundle.getString("boton.verLibrosBaja"));
+        if (reactivarLibroButton != null) reactivarLibroButton.setText(bundle.getString("boton.reactivarLibro"));
+        if (helpButton != null) helpButton.setText(bundle.getString("boton.ayuda"));
+        if (informeButton != null) informeButton.setText(bundle.getString("boton.generarInforme"));
+        //if (MenuButton != null) MenuButton.setText(bundle.getString("boton.menu"));
+
+        // Actualizar ComboBox de estados
+        if (estadoComboBox != null) {
+            estadoComboBox.setItems(FXCollections.observableArrayList(
+                    bundle.getString("estado.nuevo"),
+                    bundle.getString("estado.usadoNuevo"),
+                    bundle.getString("estado.usadoSeminuevo"),
+                    bundle.getString("estado.usadoEstropeado"),
+                    bundle.getString("estado.restaurado")
+            ));
+        }
+
+        // Actualizar placeholders de los campos de entrada
+        if (tituloField != null) tituloField.setPromptText(bundle.getString("placeholder.titulo"));
+        if (autorField != null) autorField.setPromptText(bundle.getString("placeholder.autor"));
+        if (editorialField != null) editorialField.setPromptText(bundle.getString("placeholder.editorial"));
+
+        // Actualizar los nombres de las columnas de la tabla
+        if (codigoColumn != null) codigoColumn.setText(bundle.getString("columna.codigo"));
+        if (tituloColumn != null) tituloColumn.setText(bundle.getString("columna.titulo"));
+        if (autorColumn != null) autorColumn.setText(bundle.getString("columna.autor"));
+        if (estadoColumn != null) estadoColumn.setText(bundle.getString("columna.estado"));
     }
+
+
+
 
 
 
@@ -185,6 +226,7 @@ public class LibroController {
             mostrarAlerta("Error", "No se pudo eliminar el libro.", Alert.AlertType.ERROR);
         }
     }
+
 
     @FXML
     private void reactivarLibro() {
@@ -261,20 +303,33 @@ public class LibroController {
         try {
             logger.info("Cargando libros desde la base de datos...");
             List<Libro> libros = libroDAO.obtenerLibros(false);
-            System.out.println("📌 Libros obtenidos: " + libros.size());
 
-            librosList.clear(); // ✅ Evitar NullPointerException asegurando que `librosList` está inicializado
-            librosList.addAll(libros);
+            if (libros == null || libros.isEmpty()) {
+                System.err.println("⚠ No se encontraron libros en la base de datos.");
+                return;
+            }
+
+            // Asegurar que librosList está inicializado antes de manipularlo
+            if (librosList == null) {
+                librosList = FXCollections.observableArrayList();
+                librosTable.setItems(librosList);
+            }
+
+            librosList.setAll(libros); //  Mejor que clear() + addAll()
             librosTable.refresh();
-            logger.info("Libros cargados correctamente.");
+
+            logger.info(" Libros cargados correctamente.");
+            System.out.println(" Libros obtenidos: " + libros.size());
+            for (Libro libro : libros) {
+                System.out.println(" Título: " + libro.getTitulo() + " | Autor: " + libro.getAutor());
+            }
 
         } catch (Exception e) {
             e.printStackTrace();
-            logger.error("Error al cargar los libros", e);
+            logger.error(" Error al cargar los libros", e);
             mostrarAlerta("Error", "No se pudieron cargar los libros.", Alert.AlertType.ERROR);
         }
     }
-
 
 
     private void limpiarCampos() {
@@ -351,22 +406,8 @@ public class LibroController {
      *
      * @param actionEvent Evento de acción que desencadena la navegación.
      */
+    @FXML
     public void irAmenu(ActionEvent actionEvent) {
-        try {
-            // Cargar el archivo FXML
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/intissar/proyecto2/view/inicio.fxml"));
-            Parent root = loader.load();
-            // Obtener la escena actual y el Stage
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            // Configurar la nueva escena con la vista de inicio
-            stage.setScene(new Scene(root));
-            stage.show();
-            // Mensaje de confirmación en consola (opcional)
-            System.out.println("✅ Menú principal cargado correctamente.");
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.err.println("❌ Error al cargar el menú principal: " + e.getMessage());
-        }
+        Main.cargarVista("/org/intissar/proyecto2/view/inicio.fxml");
     }
 }
