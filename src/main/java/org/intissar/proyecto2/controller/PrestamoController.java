@@ -12,11 +12,13 @@ import net.sf.jasperreports.engine.util.JRLoader;
 import net.sf.jasperreports.view.JasperViewer;
 import org.intissar.proyecto2.Main;
 import org.intissar.proyecto2.dao.PrestamoDAO;
+import org.intissar.proyecto2.model.Alumno;
 import org.intissar.proyecto2.model.Prestamo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import javafx.scene.Node;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.HashMap;
@@ -177,8 +179,7 @@ public class PrestamoController {
             boolean eliminado = prestamoDAO.eliminarPrestamo(prestamoSeleccionado.getIdPrestamo());
             if (eliminado) {
                 prestamosTable.getItems().remove(prestamoSeleccionado); // Eliminar de la UI
-                cargarPrestamosActivos(); // Recargar la lista desde la BD
-                logger.info("✅ Préstamo eliminado correctamente de la tabla.");
+                logger.info("✅ Préstamo eliminado correctamente.");
             } else {
                 logger.warn("⚠ No se pudo eliminar el préstamo.");
             }
@@ -186,6 +187,7 @@ public class PrestamoController {
             mostrarAlerta("Error", "Debe seleccionar un préstamo para eliminar.", Alert.AlertType.WARNING);
         }
     }
+
 
 
     @FXML
@@ -230,36 +232,50 @@ public class PrestamoController {
     }
 
     @FXML
-    private void generarInforme(ActionEvent event) {
-       /* if (prestamo == null) {
-            logger.error("Error: No hay préstamo seleccionado para generar informe.");
+    private void generarInforme() {
+        // Obtener el préstamo seleccionado de la tabla
+        Prestamo prestamoSeleccionado = prestamosTable.getSelectionModel().getSelectedItem();
+
+        if (prestamoSeleccionado == null) {
+            mostrarAlerta("Error", "Debe seleccionar un préstamo para generar el informe.", Alert.AlertType.WARNING);
             return;
         }
 
-        HashMap<String, Object> parameters = new HashMap<>();
-        parameters.put("id", prestamo.getId_prestamo());
-        parameters.put("nombre", prestamo.getAlumno().getNombre());
-        parameters.put("apellidos", prestamo.getAlumno().getApellido1() + " " + prestamo.getAlumno().getApellido2());
-        parameters.put("dni", prestamo.getAlumno().getDni());
-        parameters.put("titulo", prestamo.getLibro().getTitulo());
-        parameters.put("codigo", prestamo.getLibro().getCodigo());
-        parameters.put("autor", prestamo.getLibro().getAutor());
-        parameters.put("editorial", prestamo.getLibro().getEditorial());
-        parameters.put("estado", prestamo.getLibro().getEstado());
-        parameters.put("fecha", prestamo.getFecha_prestamo());
-        parameters.put("fecha_limite", prestamo.getFecha_prestamo().plusDays(15));
-
         try {
-            JasperReport report = (JasperReport) JRLoader.loadObject(
-                    getClass().getResource("/com/alesandro/biblioteca/reports/InformeAltaPrestamo.jasper")
-            );
+            // Parámetros ajustados al modelo Prestamo
+            HashMap<String, Object> parameters = new HashMap<>();
+            parameters.put("idPrestamo", prestamoSeleccionado.getIdPrestamo());
+            parameters.put("dniAlumno", prestamoSeleccionado.getDniAlumno());
+            parameters.put("codigoLibro", prestamoSeleccionado.getCodigoLibro());
+            parameters.put("fechaPrestamo", java.sql.Date.valueOf(prestamoSeleccionado.getFechaPrestamo()));
+
+            // Calcular la fecha límite sumando 15 días a la fecha de préstamo
+            LocalDate fechaDevolucionCalculada = prestamoSeleccionado.getFechaPrestamo().plusDays(15);
+            parameters.put("fechaDevolucion", java.sql.Date.valueOf(fechaDevolucionCalculada));
+
+            // Cargar el informe de JasperReports
+            InputStream reportStream = getClass().getResourceAsStream("/org/intissar/proyecto2/reports/prestamo_informe.jasper");
+            if (reportStream == null) {
+                logger.error("❌ No se encontró el archivo de informe.");
+                mostrarAlerta("Error", "No se pudo cargar el archivo de informe.", Alert.AlertType.ERROR);
+                return;
+            }
+
+            JasperReport report = (JasperReport) JRLoader.loadObject(reportStream);
             JasperPrint jprint = JasperFillManager.fillReport(report, parameters, new JREmptyDataSource());
+
+            // Mostrar el informe
             JasperViewer.viewReport(jprint, false);
-            logger.info("Informe de préstamo generado correctamente.");
+            logger.info("✅ Informe de préstamo generado correctamente.");
+
         } catch (JRException e) {
-            logger.error("Error al generar el informe de préstamo.", e);
-        }*/
+            logger.error("❌ Error al generar el informe de préstamo.", e);
+            mostrarAlerta("Error", "No se pudo generar el informe.", Alert.AlertType.ERROR);
+        }
     }
+
+
+
     @FXML
     private void verHistorico() {
         // Cargar la vista de los préstamos históricos
@@ -268,7 +284,6 @@ public class PrestamoController {
 
     private void mostrarAlerta(String titulo, String contenido, Alert.AlertType tipo) {
         Alert alerta = new Alert(tipo);
-        alerta.setTitle(titulo);
         alerta.setTitle(titulo);
         alerta.setContentText(contenido);
         alerta.showAndWait();

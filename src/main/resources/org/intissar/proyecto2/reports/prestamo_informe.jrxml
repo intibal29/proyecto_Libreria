@@ -3,33 +3,27 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="InformePrestamo" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4a699930-dd5c-46d6-b7ef-e00437c8f9e9">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<style name="Title" forecolor="#FFFFFF" fontName="Arial" fontSize="26" isBold="true"/>
-	<style name="SubTitle" forecolor="#CCCCCC" fontName="Arial" fontSize="18" isBold="true"/>
 	<style name="ColumnHeader" forecolor="#000000" fontName="Arial" fontSize="14" isBold="true"/>
 	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="idPrestamo" class="java.lang.Integer"/>
 	<parameter name="dniAlumno" class="java.lang.String"/>
-	<parameter name="nombreAlumno" class="java.lang.String"/>
-	<parameter name="apellidosAlumno" class="java.lang.String"/>
-	<parameter name="codigoLibro" class="java.lang.String"/>
-	<parameter name="tituloLibro" class="java.lang.String"/>
-	<parameter name="autorLibro" class="java.lang.String"/>
-	<parameter name="editorialLibro" class="java.lang.String"/>
-	<parameter name="estadoLibro" class="java.lang.String"/>
+	<parameter name="codigoLibro" class="java.lang.Integer"/>
 	<parameter name="fechaPrestamo" class="java.util.Date"/>
-	<parameter name="fechaLimite" class="java.util.Date"/>
+	<parameter name="fechaDevolucion" class="java.util.Date"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
 		<band height="80">
 			<staticText>
-				<reportElement x="0" y="10" width="535" height="40" uuid="3e43cf76-23fc-4b0a-bb67-8c23d232049c"/>
+				<reportElement x="0" y="10" width="535" height="40" uuid="d4b2274b-24e9-4738-9044-fa5a690754d5"/>
 				<textElement textAlignment="Center">
 					<font size="22" isBold="true"/>
 				</textElement>
 				<text><![CDATA[INFORME DE PRÉSTAMO]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="430" y="10" width="100" height="20" uuid="5b18e13a-edd6-49fa-9865-8eee6ce80825"/>
+				<reportElement x="430" y="10" width="100" height="20" uuid="b96c0abb-4100-4445-9700-fa5177f0f660"/>
 				<textElement textAlignment="Right">
 					<font size="12"/>
 				</textElement>
@@ -38,90 +32,61 @@
 		</band>
 	</title>
 	<detail>
-		<band height="300">
+		<band height="200">
 			<staticText>
-				<reportElement x="0" y="0" width="535" height="20" backcolor="#00B441" uuid="abe6720d-ae04-462e-b0e7-ad08d7a09d2e"/>
+				<reportElement x="0" y="0" width="535" height="20" backcolor="#00B441" uuid="d959c8d5-1bbd-4f16-ab93-93882e8e3fab"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[DATOS DEL ALUMNO]]></text>
+				<text><![CDATA[DETALLES DEL PRÉSTAMO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="30" width="100" height="20" uuid="fbcbd2c8-e27c-4eee-89f0-a652b414e969"/>
-				<text><![CDATA[DNI:]]></text>
+				<reportElement x="10" y="30" width="120" height="20" uuid="ef5c82e0-2fa8-46a2-bc2a-18f69c2bbb72"/>
+				<text><![CDATA[ID Préstamo:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="120" y="30" width="200" height="20" uuid="d0646a8a-4786-4ba2-a820-7b12c725dbf3"/>
+				<reportElement x="140" y="30" width="200" height="20" uuid="10b1cfd4-0a5c-435f-803b-2c695023843c"/>
+				<textFieldExpression><![CDATA[$P{idPrestamo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="50" width="120" height="20" uuid="f69e1318-a8a9-4663-bc2e-dfaadaf2fd31"/>
+				<text><![CDATA[DNI Alumno:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="140" y="50" width="200" height="20" uuid="c886d968-8b22-4389-ac5d-e0aeb724a6f2"/>
 				<textFieldExpression><![CDATA[$P{dniAlumno}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="10" y="50" width="100" height="20" uuid="4ea8cdfa-3c33-4a51-9ccc-ff55f28241e2"/>
-				<text><![CDATA[Nombre:]]></text>
+				<reportElement x="10" y="70" width="120" height="20" uuid="4c8f1008-2fb9-414e-ab69-ef359fbdf537"/>
+				<text><![CDATA[Código Libro:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="120" y="50" width="200" height="20" uuid="386bee18-406d-4726-8ef6-6cffeb826fc1"/>
-				<textFieldExpression><![CDATA[$P{nombreAlumno} + " " + $P{apellidosAlumno}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="0" y="90" width="535" height="20" backcolor="#00B441" uuid="2e189001-f8b4-4f53-aac0-fdca32596264"/>
-				<textElement textAlignment="Center">
-					<font size="14" isBold="true"/>
-				</textElement>
-				<text><![CDATA[DATOS DEL LIBRO]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="10" y="120" width="100" height="20" uuid="979ec1fc-2b71-429a-bd97-c8c75a491f35"/>
-				<text><![CDATA[Código:]]></text>
-			</staticText>
-			<textField>
-				<reportElement x="120" y="120" width="200" height="20" uuid="868a1543-a076-4ce5-9690-38c96a316a07"/>
+				<reportElement x="140" y="70" width="200" height="20" uuid="d5300918-2ffc-4b95-beb0-9f34ea22a5ac"/>
 				<textFieldExpression><![CDATA[$P{codigoLibro}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="10" y="140" width="100" height="20" uuid="fb2fcd1b-6f43-41c8-9bac-c5e1e62afa16"/>
-				<text><![CDATA[Título:]]></text>
-			</staticText>
-			<textField>
-				<reportElement x="120" y="140" width="200" height="20" uuid="6a43ee06-d2eb-4d04-bd2f-41abe5fcd70c"/>
-				<textFieldExpression><![CDATA[$P{tituloLibro}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="10" y="160" width="100" height="20" uuid="2fcae124-f115-4cef-810f-a9ee5f9bc0a8"/>
-				<text><![CDATA[Autor:]]></text>
-			</staticText>
-			<textField>
-				<reportElement x="120" y="160" width="200" height="20" uuid="5b3fddd0-941c-417a-9fa6-0f8b899053fd"/>
-				<textFieldExpression><![CDATA[$P{autorLibro}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="0" y="200" width="535" height="20" backcolor="#00B441" uuid="ac889a98-9ba5-4bce-af22-107eb3e6d9ac"/>
-				<textElement textAlignment="Center">
-					<font size="14" isBold="true"/>
-				</textElement>
-				<text><![CDATA[FECHAS DEL PRÉSTAMO]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="10" y="230" width="120" height="20" uuid="a19eb0e6-a1d8-4f07-9da7-8683cf4e9641"/>
+				<reportElement x="10" y="90" width="120" height="20" uuid="bc92f230-e969-4522-8839-2cda25aff0b3"/>
 				<text><![CDATA[Fecha Préstamo:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="140" y="230" width="150" height="20" uuid="4d198a35-45d1-4266-ba81-29a33c114dfd"/>
-				<textFieldExpression><![CDATA[$P{fechaPrestamo}]]></textFieldExpression>
+				<reportElement x="140" y="90" width="200" height="20" uuid="8b40a10d-5e8f-44f2-bd6e-07582fe517e2"/>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("dd/MM/yyyy").format($P{fechaPrestamo})]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="10" y="250" width="120" height="20" uuid="cd3fdc79-e20b-42d0-9855-c7e8c653680c"/>
-				<text><![CDATA[Fecha Límite:]]></text>
+				<reportElement x="10" y="110" width="120" height="20" uuid="566313d1-8117-461e-ba2b-f14a13a81a07"/>
+				<text><![CDATA[Fecha Devolución:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="140" y="250" width="150" height="20" uuid="f3641182-9a75-4e0a-a5b5-700e73231aee"/>
-				<textFieldExpression><![CDATA[$P{fechaLimite}]]></textFieldExpression>
+				<reportElement x="140" y="110" width="200" height="20" uuid="a6021b0d-cdd3-463d-8897-5f45f64a8520"/>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("dd/MM/yyyy").format(new java.util.Date($P{fechaPrestamo}.getTime() + (15L * 24 * 60 * 60 * 1000)))
+]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
 	<pageFooter>
 		<band height="87">
 			<staticText>
-				<reportElement x="450" y="0" width="80" height="20" uuid="dc25688e-c266-4345-b87f-26501e151fe4"/>
+				<reportElement x="450" y="0" width="80" height="20" uuid="83796880-b04f-44e7-983c-90753992c0ee"/>
 				<text><![CDATA[Página $V{PAGE_NUMBER}]]></text>
 			</staticText>
 		</band>
