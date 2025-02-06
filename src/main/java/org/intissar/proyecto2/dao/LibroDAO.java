@@ -34,72 +34,32 @@ public class LibroDAO {
      * Obtiene una lista de todos los libros registrados, con opción de incluir los dados de baja.
      *
      * @param incluirBaja true si se desean incluir libros dados de baja; false en caso contrario.
-     * @return Una lista de objetos {@link Libro}.
-     * @throws SQLException Si ocurre un error en la consulta.
+     * @return Lista de libros obtenidos de la base de datos.
      */
-    // Obtener libros, con opción de incluir dados de baja
     public List<Libro> obtenerLibros(boolean incluirBaja) throws SQLException {
         List<Libro> libros = new ArrayList<>();
-        String query = incluirBaja ? "SELECT Codigo, Titulo, Autor, Editorial, Estado, Baja FROM Libro"
+        String query = incluirBaja
+                ? "SELECT Codigo, Titulo, Autor, Editorial, Estado, Baja FROM Libro"
                 : "SELECT Codigo, Titulo, Autor, Editorial, Estado, Baja FROM Libro WHERE Baja = 0";
 
-        try (Connection conn = DBConnection.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(query);
+        try (PreparedStatement stmt = connection.prepareStatement(query);
              ResultSet rs = stmt.executeQuery()) {
 
             while (rs.next()) {
-                libros.add(new Libro(
-                        rs.getInt("codigo"),
-                        rs.getString("titulo"),
-                        rs.getString("autor"),
-                        rs.getString("editorial"),
-                        rs.getString("estado"),
-                        rs.getBoolean("baja")
-                ));
+                libros.add(mapearLibro(rs));
             }
         }
         return libros;
     }
-    /**
-     * Busca libros por un criterio específico (título, autor o editorial).
-     *
-     * @param criterio Cadena de búsqueda.
-     * @return Una lista de objetos {@link Libro} que coincidan con el criterio.
-     */
-    // Buscar libros por criterio
-    public List<Libro> buscarLibrosPorCriterio(String criterio) {
-        List<Libro> libros = new ArrayList<>();
-        String query = "SELECT * FROM Libro WHERE Baja = 0 AND " +
-                "(Titulo LIKE ? OR Autor LIKE ? OR Editorial LIKE ?)";
 
-        try (PreparedStatement stmt = connection.prepareStatement(query)) {
-            String filtro = "%" + criterio + "%";
-            stmt.setString(1, filtro);
-            stmt.setString(2, filtro);
-            stmt.setString(3, filtro);
-
-            try (ResultSet rs = stmt.executeQuery()) {
-                while (rs.next()) {
-                    libros.add(mapearLibro(rs));
-                }
-            }
-        } catch (SQLException e) {
-            logger.log(Level.SEVERE, "Error al buscar libros por criterio: " + criterio, e);
-        }
-        return libros;
-    }
     /**
      * Inserta un nuevo libro en la base de datos.
      *
-     * @param libro El objeto {@link Libro} con la información del libro a insertar.
-     * @throws SQLException Si ocurre un error en la inserción.
+     * @param libro Objeto `Libro` a insertar.
      */
-    // Insertar un nuevo libro
     public void insertarLibro(Libro libro) throws SQLException {
         String query = "INSERT INTO Libro (Titulo, Autor, Editorial, Estado, Baja) VALUES (?, ?, ?, ?, 0)";
-        try (Connection conn = DBConnection.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(query)) {
-
+        try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setString(1, libro.getTitulo());
             stmt.setString(2, libro.getAutor());
             stmt.setString(3, libro.getEditorial());
@@ -107,45 +67,37 @@ public class LibroDAO {
 
             int filasAfectadas = stmt.executeUpdate();
             if (filasAfectadas > 0) {
-                System.out.println("✅ Libro agregado correctamente.");
+                logger.info("✅ Libro agregado correctamente.");
             } else {
-                System.err.println("⚠ No se pudo insertar el libro.");
+                logger.warning("⚠ No se pudo insertar el libro.");
             }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-            throw new SQLException("❌ Error al insertar el libro: " + e.getMessage());
         }
     }
     /**
      * Reactiva un libro dado de baja.
      *
-     * @param codigo El código del libro a reactivar.
-     * @throws SQLException Si ocurre un error durante la reactivación.
+     * @param codigo Código del libro a reactivar.
      */
     public void reactivarLibro(int codigo) throws SQLException {
-        String query = "UPDATE Libro SET Baja = 0 WHERE codigo = ?";
-        try (Connection conn = DBConnection.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(query)) {
+        String query = "UPDATE Libro SET Baja = 0 WHERE Codigo = ?";
+        try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setInt(1, codigo);
             stmt.executeUpdate();
         }
     }
+
     /**
-     * Obtiene libros filtrados por un estado específico.
+     * Obtiene libros por estado.
      *
-     * @param estado El estado del libro (ej. "Disponible", "Prestado").
-     * @return Lista de libros con el estado especificado.
-     * @throws SQLException Si ocurre un error en la consulta.
+     * @param estado Estado del libro.
+     * @return Lista de libros filtrados por estado.
      */
     public List<Libro> obtenerLibrosPorEstado(String estado) throws SQLException {
         List<Libro> libros = new ArrayList<>();
-        String query = "SELECT * FROM Libro WHERE estado = ? AND baja = 0";
+        String query = "SELECT * FROM Libro WHERE Estado = ? AND Baja = 0";
 
-        try (Connection conn = DBConnection.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(query)) {
+        try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setString(1, estado);
-
             try (ResultSet rs = stmt.executeQuery()) {
                 while (rs.next()) {
                     libros.add(mapearLibro(rs));
@@ -155,61 +107,42 @@ public class LibroDAO {
         return libros;
     }
     /**
-     * Elimina un libro de la base de datos basado en su código.
+     * Elimina un libro de la base de datos.
      *
-     * @param codigo El código del libro a eliminar.
-     * @throws SQLException Si ocurre un error durante la eliminación.
+     * @param codigo Código del libro a eliminar.
+     * @return true si la eliminación fue exitosa, false si no.
      */
     public boolean eliminarLibro(int codigo) throws SQLException {
-        String query = "DELETE FROM Libro WHERE codigo = ?";
-        try (Connection conn = DBConnection.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(query)) {
-
+        String query = "UPDATE Libro SET Baja = 1 WHERE Codigo = ?";
+        try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setInt(1, codigo);
-            int rowsAffected = stmt.executeUpdate();
-
-            if (rowsAffected > 0) {
-                logger.info(" Libro eliminado correctamente. Código: {}");
-                return true;
-            } else {
-                logger.warning("⚠ No se encontró el libro con código: {} para eliminar.");
-                return false;
-            }
-
-        } catch (SQLException e) {
-            logger.info(" Error al eliminar el libro con código: {}");
-            throw new SQLException("Error al eliminar el libro con código: " + codigo, e);
+            return stmt.executeUpdate() > 0;
         }
     }
 
     /**
-     * Modifica los datos de un libro existente.
+     * Modifica un libro en la base de datos, permitiendo actualizar solo los campos que cambian.
      *
-     * @param libro El objeto {@link Libro} con los nuevos datos.
-     * @throws SQLException Si ocurre un error durante la actualización.
+     * @param libro Objeto `Libro` con los cambios.
      */
-    // Modificar un libro existente
     public void modificarLibro(Libro libro) throws SQLException {
-        String query = "UPDATE Libro SET Titulo = ?, Autor = ?, Editorial = ?, Estado = ? WHERE Codigo = ?";
-        try (Connection conn = DBConnection.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(query)) {
+        String query = "UPDATE Libro SET Titulo = COALESCE(?, Titulo), "
+                + "Autor = COALESCE(?, Autor), Editorial = COALESCE(?, Editorial), "
+                + "Estado = COALESCE(?, Estado) WHERE Codigo = ?";
 
-            stmt.setString(1, libro.getTitulo());
-            stmt.setString(2, libro.getAutor());
-            stmt.setString(3, libro.getEditorial());
-            stmt.setString(4, libro.getEstado());
+        try (PreparedStatement stmt = connection.prepareStatement(query)) {
+            stmt.setString(1, libro.getTitulo().isEmpty() ? null : libro.getTitulo());
+            stmt.setString(2, libro.getAutor().isEmpty() ? null : libro.getAutor());
+            stmt.setString(3, libro.getEditorial().isEmpty() ? null : libro.getEditorial());
+            stmt.setString(4, libro.getEstado().isEmpty() ? null : libro.getEstado());
             stmt.setInt(5, libro.getCodigo());
 
             int filasAfectadas = stmt.executeUpdate();
             if (filasAfectadas > 0) {
-                System.out.println("✅ Libro modificado correctamente.");
+                logger.info("✅ Libro modificado correctamente.");
             } else {
-                System.err.println("⚠ No se pudo modificar el libro.");
+                logger.warning("⚠ No se pudo modificar el libro.");
             }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-            throw new SQLException("❌ Error al modificar el libro: " + e.getMessage());
         }
     }
     /**
@@ -321,25 +254,25 @@ public class LibroDAO {
         }
     }
 
-    // Verificar existencia de un libro por su código
+    /**
+     * Verifica si un libro existe en la base de datos.
+     *
+     * @param codigo Código del libro.
+     * @return true si el libro existe, false en caso contrario.
+     */
     public boolean existeLibro(int codigo) {
-        String query = "SELECT COUNT(*) FROM Libro WHERE codigo = ?";
-
-        try (Connection conn = DBConnection.getConnection();  // 🔹 Nueva conexión para cada consulta
-             PreparedStatement stmt = conn.prepareStatement(query)) {
-
+        String query = "SELECT COUNT(*) FROM Libro WHERE Codigo = ?";
+        try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setInt(1, codigo);
-
             try (ResultSet rs = stmt.executeQuery()) {
-                if (rs.next()) {
-                    return rs.getInt(1) > 0;
-                }
+                return rs.next() && rs.getInt(1) > 0;
             }
         } catch (SQLException e) {
             logger.log(Level.SEVERE, "Error al verificar existencia del libro con código: " + codigo, e);
         }
         return false;
     }
+
     /**
      * Mapear un {@link ResultSet} a un objeto {@link Libro}.
      *

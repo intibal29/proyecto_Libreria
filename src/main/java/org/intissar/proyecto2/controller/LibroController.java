@@ -37,7 +37,7 @@ public class LibroController {
     @FXML
     private TextField tituloField, autorField, editorialField;
     @FXML
-    private ComboBox<String> estadoComboBox, idiomaComboBox;
+    private ComboBox<String> estadoComboBox, idiomaComboBox,filtroEstadoComboBox;
     @FXML
     private TableView<Libro> librosTable;
     @FXML
@@ -67,12 +67,11 @@ public class LibroController {
      */
     @FXML
     public void initialize() {
-        // Verificar que los elementos de la UI no sean null
-        if (idiomaComboBox == null || tituloLabel == null || agregarLibroButton == null) {
-            System.err.println("⚠ Warning: Algunos elementos UI son null. Verifica que el fx:id coincida en libro_view.fxml.");
-            return;
-        }
+        logger.info("Inicializando la vista de libros...");
+
         // Configurar ComboBox de idioma
+        bundle = Main.getBundle();
+
         idiomaComboBox.getItems().addAll("Español", "English");
         idiomaComboBox.setValue(Main.getLocale().getLanguage().equals("en") ? "English" : "Español");
         idiomaComboBox.setOnAction(event -> cambiarIdioma());
@@ -91,7 +90,6 @@ public class LibroController {
             ));
         }
 
-
         // Configurar columnas de la tabla
         codigoColumn.setCellValueFactory(new PropertyValueFactory<>("codigo"));
         tituloColumn.setCellValueFactory(new PropertyValueFactory<>("titulo"));
@@ -100,7 +98,6 @@ public class LibroController {
 
         librosList = FXCollections.observableArrayList();
         librosTable.setItems(librosList);
-
         cargarLibros();
     }
 
@@ -122,7 +119,7 @@ public class LibroController {
      * Actualiza los textos de la interfaz según el idioma seleccionado.
      */
     private void actualizarTextos() {
-        ResourceBundle bundle = Main.getBundle();
+        bundle = Main.getBundle();
 
         // Actualizar título
         if (tituloLabel != null) tituloLabel.setText(bundle.getString("titulo.libros"));
@@ -160,11 +157,6 @@ public class LibroController {
         if (estadoColumn != null) estadoColumn.setText(bundle.getString("columna.estado"));
     }
 
-
-
-
-
-
     /**
      * Agrega un nuevo libro a la base de datos si los campos son válidos.
      */
@@ -189,9 +181,6 @@ public class LibroController {
         }
     }
     @FXML
-    private ComboBox<String> filtroEstadoComboBox;
-
-    @FXML
     private void filtrarPorEstado() {
         String estadoSeleccionado = filtroEstadoComboBox.getValue();
         if (estadoSeleccionado == null || estadoSeleccionado.equals("Todos")) {
@@ -213,20 +202,20 @@ public class LibroController {
      */
     @FXML
     private void eliminarLibro() {
+        Libro libroSeleccionado = librosTable.getSelectionModel().getSelectedItem();
+        if (libroSeleccionado == null) {
+            mostrarAlerta("Error", "Seleccione un libro para eliminar.", Alert.AlertType.WARNING);
+            return;
+        }
         try {
-            Libro libroSeleccionado = librosTable.getSelectionModel().getSelectedItem();
-            if (libroSeleccionado != null) {
-                libroDAO.eliminarLibro(libroSeleccionado.getCodigo());
-                mostrarAlerta("Éxito", "Libro eliminado correctamente.", Alert.AlertType.INFORMATION);
-                cargarLibros();
-            } else {
-                mostrarAlerta("Error", "Seleccione un libro para eliminar.", Alert.AlertType.WARNING);
-            }
+            libroDAO.eliminarLibro(libroSeleccionado.getCodigo());
+            cargarLibros();
+            mostrarAlerta("Éxito", "Libro eliminado correctamente.", Alert.AlertType.INFORMATION);
         } catch (SQLException e) {
+            logger.error("Error al eliminar el libro", e);
             mostrarAlerta("Error", "No se pudo eliminar el libro.", Alert.AlertType.ERROR);
         }
     }
-
 
     @FXML
     private void reactivarLibro() {
@@ -369,8 +358,12 @@ public class LibroController {
     private void generarInforme() {
         InformesController.generarReporteLibros();
     }
+    /**
+     * Valida que los campos de entrada no estén vacíos.
+     */
     private boolean validarCampos() {
-        if (tituloField.getText().isEmpty() || autorField.getText().isEmpty() || editorialField.getText().isEmpty() || estadoComboBox.getValue() == null) {
+        if (tituloField.getText().isEmpty() || autorField.getText().isEmpty() ||
+                editorialField.getText().isEmpty() || estadoComboBox.getValue() == null) {
             mostrarAlerta("Error", "Todos los campos son obligatorios.", Alert.AlertType.WARNING);
             return false;
         }
