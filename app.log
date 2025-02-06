@@ -1636,3 +1636,1087 @@ feb 03, 2025 9:26:34 A. M. org.intissar.proyecto2.Main actualizarTextos
 WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
 feb 03, 2025 9:26:34 A. M. org.intissar.proyecto2.Main actualizarTextos
 INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 9:43:12 A. M. org.intissar.proyecto2.Main main
+INFO: Iniciando la aplicación desde el método main.
+feb 03, 2025 9:43:12 A. M. org.intissar.proyecto2.Main start
+INFO: Iniciando aplicación...
+feb 03, 2025 9:43:12 A. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 03, 2025 9:43:12 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 03, 2025 9:43:15 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 9:43:15 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 03, 2025 9:43:15 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 9:43:24 A. M. org.intissar.proyecto2.Main handleAlumno
+INFO: Navegando a la vista de alumnos.
+feb 03, 2025 9:43:24 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/alumno_view.fxml
+feb 03, 2025 9:43:26 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 03, 2025 9:43:26 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 03, 2025 9:43:26 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 03, 2025 9:43:26 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 03, 2025 9:43:26 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 9:43:59 A. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: en
+feb 03, 2025 9:43:59 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 03, 2025 9:43:59 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 03, 2025 9:43:59 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 03, 2025 9:43:59 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 03, 2025 9:43:59 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 9:44:03 A. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 03, 2025 9:44:03 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 03, 2025 9:44:03 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 03, 2025 9:44:03 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 03, 2025 9:44:03 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 03, 2025 9:44:03 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 9:44:15 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 03, 2025 9:44:15 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 9:44:18 A. M. org.intissar.proyecto2.Main handlePrestamo
+INFO: Navegando a la vista de préstamos.
+feb 03, 2025 9:44:18 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/prestamo_view.fxml
+feb 03, 2025 9:44:18 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 03, 2025 9:44:18 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 03, 2025 9:44:18 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 03, 2025 9:44:18 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 03, 2025 9:44:18 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 10:57:46 A. M. org.intissar.proyecto2.Main main
+INFO: Iniciando la aplicación desde el método main.
+feb 03, 2025 10:57:46 A. M. org.intissar.proyecto2.Main start
+INFO: Iniciando aplicación...
+feb 03, 2025 10:57:46 A. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 03, 2025 10:57:46 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 03, 2025 10:57:47 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 10:57:47 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 03, 2025 10:57:48 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 10:57:49 A. M. org.intissar.proyecto2.Main handleLibro
+INFO: Navegando a la vista de libros.
+feb 03, 2025 10:57:49 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/libro_view.fxml
+feb 03, 2025 10:57:50 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 03, 2025 10:57:50 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 03, 2025 10:57:50 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 03, 2025 10:57:50 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 03, 2025 10:57:50 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 10:57:53 A. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 03, 2025 10:57:53 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 03, 2025 10:57:53 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 03, 2025 10:57:53 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 03, 2025 10:57:53 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 03, 2025 10:57:53 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:46:03 A. M. org.intissar.proyecto2.Main main
+INFO: Iniciando la aplicación desde el método main.
+feb 03, 2025 11:46:03 A. M. org.intissar.proyecto2.Main start
+INFO: Iniciando aplicación...
+feb 03, 2025 11:46:03 A. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 03, 2025 11:46:03 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 03, 2025 11:46:06 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:46:06 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 03, 2025 11:46:07 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:46:42 A. M. org.intissar.proyecto2.Main handleLibro
+INFO: Navegando a la vista de libros.
+feb 03, 2025 11:46:42 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/libro_view.fxml
+feb 03, 2025 11:46:44 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 03, 2025 11:46:44 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 03, 2025 11:46:44 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 03, 2025 11:46:44 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 03, 2025 11:46:44 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:46:46 A. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: en
+feb 03, 2025 11:46:46 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 03, 2025 11:46:46 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 03, 2025 11:46:46 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 03, 2025 11:46:46 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 03, 2025 11:46:46 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:46:49 A. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 03, 2025 11:46:49 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 03, 2025 11:46:49 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 03, 2025 11:46:49 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 03, 2025 11:46:49 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 03, 2025 11:46:49 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:46:52 A. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: en
+feb 03, 2025 11:46:52 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 03, 2025 11:46:52 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 03, 2025 11:46:52 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 03, 2025 11:46:52 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 03, 2025 11:46:52 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:46:54 A. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 03, 2025 11:46:54 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 03, 2025 11:46:54 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 03, 2025 11:46:54 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 03, 2025 11:46:54 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 03, 2025 11:46:54 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:46:57 A. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: en
+feb 03, 2025 11:46:57 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 03, 2025 11:46:57 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 03, 2025 11:46:57 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 03, 2025 11:46:57 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 03, 2025 11:46:57 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:47:00 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 03, 2025 11:47:00 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:47:02 A. M. org.intissar.proyecto2.Main handleLibro
+INFO: Navegando a la vista de libros.
+feb 03, 2025 11:47:02 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/libro_view.fxml
+feb 03, 2025 11:47:02 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 03, 2025 11:47:02 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 03, 2025 11:47:02 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 03, 2025 11:47:02 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 03, 2025 11:47:02 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:47:09 A. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 03, 2025 11:47:09 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 03, 2025 11:47:09 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 03, 2025 11:47:09 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 03, 2025 11:47:09 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 03, 2025 11:47:09 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:47:13 A. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: en
+feb 03, 2025 11:47:13 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 03, 2025 11:47:13 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 03, 2025 11:47:13 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 03, 2025 11:47:13 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 03, 2025 11:47:13 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:47:16 A. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 03, 2025 11:47:16 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 03, 2025 11:47:16 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 03, 2025 11:47:16 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 03, 2025 11:47:16 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 03, 2025 11:47:16 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:47:17 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 03, 2025 11:47:17 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:47:20 A. M. org.intissar.proyecto2.Main cambiarIdiomaSeleccionado
+INFO: 🌍 Usuario cambió el idioma a: en
+feb 03, 2025 11:47:20 A. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: en
+feb 03, 2025 11:47:20 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:47:20 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:47:22 A. M. org.intissar.proyecto2.Main handleLibro
+INFO: Navegando a la vista de libros.
+feb 03, 2025 11:47:22 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/libro_view.fxml
+feb 03, 2025 11:47:22 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 03, 2025 11:47:22 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 03, 2025 11:47:22 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 03, 2025 11:47:22 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 03, 2025 11:47:22 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:47:24 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 03, 2025 11:47:24 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:47:25 A. M. org.intissar.proyecto2.Main cambiarIdiomaSeleccionado
+INFO: 🌍 Usuario cambió el idioma a: es
+feb 03, 2025 11:47:25 A. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 03, 2025 11:47:25 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:47:25 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:47:26 A. M. org.intissar.proyecto2.Main handleLibro
+INFO: Navegando a la vista de libros.
+feb 03, 2025 11:47:26 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/libro_view.fxml
+feb 03, 2025 11:47:26 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 03, 2025 11:47:26 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 03, 2025 11:47:26 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 03, 2025 11:47:26 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 03, 2025 11:47:26 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:47:33 A. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 03, 2025 11:47:33 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 03, 2025 11:47:33 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 03, 2025 11:47:33 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 03, 2025 11:47:33 A. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 03, 2025 11:47:33 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:56:05 A. M. org.intissar.proyecto2.Main main
+INFO: Iniciando la aplicación desde el método main.
+feb 03, 2025 11:56:05 A. M. org.intissar.proyecto2.Main start
+INFO: Iniciando aplicación...
+feb 03, 2025 11:56:05 A. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 03, 2025 11:56:05 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 03, 2025 11:56:06 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:56:06 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 03, 2025 11:56:07 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:56:10 A. M. org.intissar.proyecto2.Main cambiarIdiomaSeleccionado
+INFO: 🌍 Usuario cambió el idioma a: en
+feb 03, 2025 11:56:10 A. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: en
+feb 03, 2025 11:56:10 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:56:10 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:56:15 A. M. org.intissar.proyecto2.Main main
+INFO: Iniciando la aplicación desde el método main.
+feb 03, 2025 11:56:15 A. M. org.intissar.proyecto2.Main start
+INFO: Iniciando aplicación...
+feb 03, 2025 11:56:15 A. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 03, 2025 11:56:15 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 03, 2025 11:56:17 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 03, 2025 11:56:17 A. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 03, 2025 11:56:17 A. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 8:27:21 P. M. org.intissar.proyecto2.Main main
+INFO: Iniciando la aplicación desde el método main.
+feb 05, 2025 8:27:21 P. M. org.intissar.proyecto2.Main start
+INFO: Iniciando aplicación...
+feb 05, 2025 8:27:21 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 05, 2025 8:27:21 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 05, 2025 8:27:22 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 8:27:22 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 05, 2025 8:27:23 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 8:27:24 P. M. org.intissar.proyecto2.Main handleAlumno
+INFO: Navegando a la vista de alumnos.
+feb 05, 2025 8:27:24 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/alumno_view.fxml
+feb 05, 2025 8:27:26 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 05, 2025 8:27:26 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 05, 2025 8:27:26 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 05, 2025 8:27:26 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 05, 2025 8:27:26 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 8:27:59 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: en
+feb 05, 2025 8:27:59 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 05, 2025 8:27:59 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 05, 2025 8:27:59 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 05, 2025 8:27:59 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 05, 2025 8:27:59 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 8:28:03 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 05, 2025 8:28:03 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 05, 2025 8:28:03 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 05, 2025 8:28:03 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 05, 2025 8:28:03 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 05, 2025 8:28:03 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 8:28:05 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: en
+feb 05, 2025 8:28:05 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 05, 2025 8:28:05 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 05, 2025 8:28:05 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 05, 2025 8:28:05 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 05, 2025 8:28:05 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 8:28:08 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 05, 2025 8:28:08 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 05, 2025 8:28:08 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 05, 2025 8:28:08 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 05, 2025 8:28:08 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 05, 2025 8:28:08 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 8:28:12 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 05, 2025 8:28:12 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 8:28:14 P. M. org.intissar.proyecto2.Main handlePrestamo
+INFO: Navegando a la vista de préstamos.
+feb 05, 2025 8:28:14 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/prestamo_view.fxml
+feb 05, 2025 8:28:14 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 05, 2025 8:28:14 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 05, 2025 8:28:14 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 05, 2025 8:28:14 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 05, 2025 8:28:14 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 8:28:17 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: en
+feb 05, 2025 8:28:17 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 05, 2025 8:28:17 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 05, 2025 8:28:17 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 05, 2025 8:28:17 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 05, 2025 8:28:17 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 8:28:21 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 05, 2025 8:28:21 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 05, 2025 8:28:21 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 05, 2025 8:28:21 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 05, 2025 8:28:21 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 05, 2025 8:28:21 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 8:29:34 P. M. org.intissar.proyecto2.Main main
+INFO: Iniciando la aplicación desde el método main.
+feb 05, 2025 8:29:34 P. M. org.intissar.proyecto2.Main start
+INFO: Iniciando aplicación...
+feb 05, 2025 8:29:34 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 05, 2025 8:29:34 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 05, 2025 8:29:35 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 8:29:35 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 05, 2025 8:29:35 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 8:29:36 P. M. org.intissar.proyecto2.Main handlePrestamo
+INFO: Navegando a la vista de préstamos.
+feb 05, 2025 8:29:36 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/prestamo_view.fxml
+feb 05, 2025 8:29:37 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 05, 2025 8:29:37 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 05, 2025 8:29:37 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 05, 2025 8:29:37 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 05, 2025 8:29:37 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 8:36:31 P. M. org.intissar.proyecto2.Main main
+INFO: Iniciando la aplicación desde el método main.
+feb 05, 2025 8:36:31 P. M. org.intissar.proyecto2.Main start
+INFO: Iniciando aplicación...
+feb 05, 2025 8:36:31 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 05, 2025 8:36:31 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 05, 2025 8:36:32 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 8:36:32 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 05, 2025 8:36:32 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 8:36:33 P. M. org.intissar.proyecto2.Main handlePrestamo
+INFO: Navegando a la vista de préstamos.
+feb 05, 2025 8:36:33 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/prestamo_view.fxml
+feb 05, 2025 8:36:34 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 05, 2025 8:36:34 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 05, 2025 8:36:34 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 05, 2025 8:36:34 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 05, 2025 8:36:34 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 10:58:58 P. M. org.intissar.proyecto2.Main main
+INFO: Iniciando la aplicación desde el método main.
+feb 05, 2025 10:58:58 P. M. org.intissar.proyecto2.Main start
+INFO: Iniciando aplicación...
+feb 05, 2025 10:58:58 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 05, 2025 10:58:58 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 05, 2025 10:58:59 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 10:58:59 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 05, 2025 10:58:59 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 10:59:02 P. M. org.intissar.proyecto2.Main handlePrestamo
+INFO: Navegando a la vista de préstamos.
+feb 05, 2025 10:59:02 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/prestamo_view.fxml
+feb 05, 2025 10:59:03 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 05, 2025 10:59:03 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 05, 2025 10:59:03 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 05, 2025 10:59:03 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 05, 2025 10:59:03 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 11:28:05 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: en
+feb 05, 2025 11:28:05 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 05, 2025 11:28:05 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 05, 2025 11:28:05 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 05, 2025 11:28:05 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 05, 2025 11:28:05 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 05, 2025 11:28:07 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 05, 2025 11:28:07 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 05, 2025 11:28:07 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 05, 2025 11:28:07 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 05, 2025 11:28:07 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 05, 2025 11:28:07 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 12:46:56 P. M. org.intissar.proyecto2.Main main
+INFO: Iniciando la aplicación desde el método main.
+feb 06, 2025 12:46:56 P. M. org.intissar.proyecto2.Main start
+INFO: Iniciando aplicación...
+feb 06, 2025 12:46:56 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 06, 2025 12:46:56 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 12:46:57 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 12:46:57 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 12:46:57 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 12:48:38 P. M. org.intissar.proyecto2.Main handlePrestamo
+INFO: Navegando a la vista de préstamos.
+feb 06, 2025 12:48:38 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/prestamo_view.fxml
+feb 06, 2025 12:48:40 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 12:48:40 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 12:48:40 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 12:48:40 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 12:48:40 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 12:49:29 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 12:49:30 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 12:49:49 P. M. org.intissar.proyecto2.Main handleAlumno
+INFO: Navegando a la vista de alumnos.
+feb 06, 2025 12:49:49 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/alumno_view.fxml
+feb 06, 2025 12:49:49 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 12:49:49 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 12:49:49 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 12:49:49 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 12:49:49 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 12:49:56 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 12:49:56 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 12:49:59 P. M. org.intissar.proyecto2.Main handleHistorico
+INFO: Navegando a la vista del histórico.
+feb 06, 2025 12:49:59 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/historico_view.fxml
+feb 06, 2025 12:50:00 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 12:50:00 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 12:50:00 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 12:50:00 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 12:50:00 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 12:50:03 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 12:50:03 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 12:50:04 P. M. org.intissar.proyecto2.Main handleLibro
+INFO: Navegando a la vista de libros.
+feb 06, 2025 12:50:04 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/libro_view.fxml
+feb 06, 2025 12:50:04 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 12:50:04 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 12:50:04 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 12:50:04 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 12:50:04 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:37:25 P. M. org.intissar.proyecto2.Main main
+INFO: Iniciando la aplicación desde el método main.
+feb 06, 2025 1:37:25 P. M. org.intissar.proyecto2.Main start
+INFO: Iniciando aplicación...
+feb 06, 2025 1:37:25 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 06, 2025 1:37:25 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 1:37:26 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:37:26 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 1:37:26 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:37:28 P. M. org.intissar.proyecto2.Main handleAlumno
+INFO: Navegando a la vista de alumnos.
+feb 06, 2025 1:37:28 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/alumno_view.fxml
+feb 06, 2025 1:37:29 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 1:37:29 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 1:37:29 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 1:37:29 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 1:37:29 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:37:37 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 1:37:37 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:37:38 P. M. org.intissar.proyecto2.Main handlePrestamo
+INFO: Navegando a la vista de préstamos.
+feb 06, 2025 1:37:38 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/prestamo_view.fxml
+feb 06, 2025 1:37:39 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 1:37:39 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 1:37:39 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 1:37:39 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 1:37:39 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:37:58 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 1:37:58 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:38:01 P. M. org.intissar.proyecto2.Main handleHistorico
+INFO: Navegando a la vista del histórico.
+feb 06, 2025 1:38:01 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/historico_view.fxml
+feb 06, 2025 1:38:01 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 1:38:01 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 1:38:01 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 1:38:01 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 1:38:01 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:38:13 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 1:38:13 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:38:17 P. M. org.intissar.proyecto2.Main handleLibro
+INFO: Navegando a la vista de libros.
+feb 06, 2025 1:38:17 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/libro_view.fxml
+feb 06, 2025 1:38:18 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 1:38:18 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 1:38:18 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 1:38:18 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 1:38:18 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:46:27 P. M. org.intissar.proyecto2.Main main
+INFO: Iniciando la aplicación desde el método main.
+feb 06, 2025 1:46:27 P. M. org.intissar.proyecto2.Main start
+INFO: Iniciando aplicación...
+feb 06, 2025 1:46:27 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 06, 2025 1:46:27 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 1:46:28 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:46:28 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 1:46:29 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:46:31 P. M. org.intissar.proyecto2.Main handleLibro
+INFO: Navegando a la vista de libros.
+feb 06, 2025 1:46:31 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/libro_view.fxml
+feb 06, 2025 1:46:33 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 1:46:33 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 1:46:33 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 1:46:33 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 1:46:33 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:48:21 P. M. org.intissar.proyecto2.Main main
+INFO: Iniciando la aplicación desde el método main.
+feb 06, 2025 1:48:21 P. M. org.intissar.proyecto2.Main start
+INFO: Iniciando aplicación...
+feb 06, 2025 1:48:21 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 06, 2025 1:48:21 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 1:48:22 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:48:22 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 1:48:23 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:48:23 P. M. org.intissar.proyecto2.Main handleLibro
+INFO: Navegando a la vista de libros.
+feb 06, 2025 1:48:23 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/libro_view.fxml
+feb 06, 2025 1:48:24 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 1:48:24 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 1:48:24 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 1:48:24 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 1:48:24 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:53:22 P. M. org.intissar.proyecto2.Main main
+INFO: Iniciando la aplicación desde el método main.
+feb 06, 2025 1:53:22 P. M. org.intissar.proyecto2.Main start
+INFO: Iniciando aplicación...
+feb 06, 2025 1:53:22 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 06, 2025 1:53:22 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 1:53:24 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:53:24 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 1:53:24 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:53:25 P. M. org.intissar.proyecto2.Main handlePrestamo
+INFO: Navegando a la vista de préstamos.
+feb 06, 2025 1:53:25 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/prestamo_view.fxml
+feb 06, 2025 1:53:26 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 1:53:26 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 1:53:26 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 1:53:26 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 1:53:26 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:53:43 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 1:53:43 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:53:44 P. M. org.intissar.proyecto2.Main handleAlumno
+INFO: Navegando a la vista de alumnos.
+feb 06, 2025 1:53:44 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/alumno_view.fxml
+feb 06, 2025 1:53:44 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 1:53:44 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 1:53:44 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 1:53:44 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 1:53:44 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:53:51 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 1:53:51 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:53:52 P. M. org.intissar.proyecto2.Main handleHistorico
+INFO: Navegando a la vista del histórico.
+feb 06, 2025 1:53:52 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/historico_view.fxml
+feb 06, 2025 1:53:53 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 1:53:53 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 1:53:53 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 1:53:53 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 1:53:53 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:54:11 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 1:54:11 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:54:15 P. M. org.intissar.proyecto2.Main handleLibro
+INFO: Navegando a la vista de libros.
+feb 06, 2025 1:54:15 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/libro_view.fxml
+feb 06, 2025 1:54:15 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 1:54:15 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 1:54:15 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 1:54:15 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 1:54:15 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:56:24 P. M. org.intissar.proyecto2.Main main
+INFO: Iniciando la aplicación desde el método main.
+feb 06, 2025 1:56:24 P. M. org.intissar.proyecto2.Main start
+INFO: Iniciando aplicación...
+feb 06, 2025 1:56:24 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 06, 2025 1:56:24 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 1:56:27 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:56:27 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 1:56:27 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:56:33 P. M. org.intissar.proyecto2.Main handleAlumno
+INFO: Navegando a la vista de alumnos.
+feb 06, 2025 1:56:33 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/alumno_view.fxml
+feb 06, 2025 1:56:34 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 1:56:34 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 1:56:34 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 1:56:34 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 1:56:34 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:57:00 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 1:57:00 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:57:42 P. M. org.intissar.proyecto2.Main handlePrestamo
+INFO: Navegando a la vista de préstamos.
+feb 06, 2025 1:57:42 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/prestamo_view.fxml
+feb 06, 2025 1:57:42 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 1:57:42 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 1:57:42 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 1:57:42 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 1:57:42 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:58:15 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 1:58:15 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 1:58:22 P. M. org.intissar.proyecto2.Main handleHistorico
+INFO: Navegando a la vista del histórico.
+feb 06, 2025 1:58:22 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/historico_view.fxml
+feb 06, 2025 1:58:23 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 1:58:23 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 1:58:23 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 1:58:23 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 1:58:23 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 2:09:23 P. M. org.intissar.proyecto2.Main main
+INFO: Iniciando la aplicación desde el método main.
+feb 06, 2025 2:09:23 P. M. org.intissar.proyecto2.Main start
+INFO: Iniciando aplicación...
+feb 06, 2025 2:09:23 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 06, 2025 2:09:23 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 2:09:24 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 2:09:24 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 2:09:24 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 2:09:28 P. M. org.intissar.proyecto2.Main handleLibro
+INFO: Navegando a la vista de libros.
+feb 06, 2025 2:09:28 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/libro_view.fxml
+feb 06, 2025 2:09:29 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 2:09:29 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 2:09:29 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 2:09:29 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 2:09:29 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 2:09:34 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 06, 2025 2:09:34 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 2:09:34 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 2:09:34 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 2:09:34 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 2:09:34 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 2:09:37 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: en
+feb 06, 2025 2:09:37 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 2:09:37 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 2:09:37 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 2:09:37 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 2:09:37 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 2:09:39 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 06, 2025 2:09:39 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 2:09:39 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 2:09:39 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 2:09:39 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 2:09:39 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 2:09:40 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: en
+feb 06, 2025 2:09:40 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 2:09:40 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 2:09:40 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 2:09:40 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 2:09:40 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 2:09:42 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 06, 2025 2:09:42 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 2:09:42 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 2:09:42 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 2:09:42 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 2:09:42 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 2:09:45 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: en
+feb 06, 2025 2:09:45 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 2:09:45 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 2:09:45 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 2:09:45 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 2:09:45 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 2:10:05 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 06, 2025 2:10:05 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 2:10:05 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 2:10:05 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 2:10:05 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 2:10:05 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 2:10:08 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: en
+feb 06, 2025 2:10:08 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 2:10:08 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 2:10:08 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 2:10:08 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 2:10:08 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 2:10:10 P. M. org.intissar.proyecto2.Main cambiarIdioma
+INFO: 🌍 Idioma cambiado a: es
+feb 06, 2025 2:10:10 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Alumno en la escena.
+feb 06, 2025 2:10:10 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Histórico en la escena.
+feb 06, 2025 2:10:10 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Libro en la escena.
+feb 06, 2025 2:10:10 P. M. org.intissar.proyecto2.Main actualizarTextos
+WARNING: ⚠ No se encontró el botón de Préstamo en la escena.
+feb 06, 2025 2:10:10 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}
+feb 06, 2025 2:10:17 P. M. org.intissar.proyecto2.Main cargarVista
+INFO: Cargando vista: /org/intissar/proyecto2/view/inicio.fxml
+feb 06, 2025 2:10:17 P. M. org.intissar.proyecto2.Main actualizarTextos
+INFO: Textos de la UI actualizados con el idioma: {}

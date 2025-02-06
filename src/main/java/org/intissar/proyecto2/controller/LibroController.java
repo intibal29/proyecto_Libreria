@@ -47,7 +47,7 @@ public class LibroController {
 
     // Etiquetas y botones
     @FXML private Label tituloLabel;
-    @FXML private Button agregarLibroButton, modificarLibroButton, eliminarLibroButton,
+    @FXML private Button agregarLibroButton, modificarLibroButton, eliminarLibro,
             verBajaButton, reactivarLibroButton, helpButton, informeButton, MenuButton;
 
     private Locale locale = new Locale("es"); // Idioma predeterminado (Español)
@@ -130,7 +130,7 @@ public class LibroController {
         // Actualizar botones
         if (agregarLibroButton != null) agregarLibroButton.setText(bundle.getString("boton.agregarLibro"));
         if (modificarLibroButton != null) modificarLibroButton.setText(bundle.getString("boton.modificarLibro"));
-        if (eliminarLibroButton != null) eliminarLibroButton.setText(bundle.getString("boton.eliminarLibro"));
+        if (eliminarLibro != null) eliminarLibro.setText(bundle.getString("boton.eliminarLibro"));
         if (verBajaButton != null) verBajaButton.setText(bundle.getString("boton.verLibrosBaja"));
         if (reactivarLibroButton != null) reactivarLibroButton.setText(bundle.getString("boton.reactivarLibro"));
         if (helpButton != null) helpButton.setText(bundle.getString("boton.ayuda"));

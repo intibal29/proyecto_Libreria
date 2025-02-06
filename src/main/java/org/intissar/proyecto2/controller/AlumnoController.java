@@ -52,7 +52,7 @@ public class AlumnoController {
     private TableColumn<Alumno, String> dniColumn, nombreColumn, apellido1Column, apellido2Column;
 
     @FXML
-    private Button agregarButton, modificarButton, eliminarButton;
+    private Button agregarButton, modificarButton, eliminarButton,btnGenerarInforme;
     private static Locale locale = new Locale("es"); // Idioma predeterminado (Español)
     private static ResourceBundle bundle;
     private ObservableList<Alumno> listaAlumnos;
@@ -142,7 +142,6 @@ public class AlumnoController {
     /**
      * Asigna los textos de los botones e inputs desde el archivo de recursos (Bundle)
      * de acuerdo con el idioma seleccionado.
-     *
      * Este metodo establece los textos de los botones de agregar, modificar y eliminar,
      * así como el placeholder del campo de búsqueda, utilizando las claves del archivo de idiomas.
      */
@@ -199,7 +198,7 @@ public class AlumnoController {
         agregarButton.setText(bundle.getString("boton.agregarAlumno"));
         modificarButton.setText(bundle.getString("boton.modificarAlumno"));
         eliminarButton.setText(bundle.getString("boton.eliminarAlumno"));
-       // btnGenerarInforme.setText(bundle.getString("boton.generarInforme"));
+        btnGenerarInforme.setText(bundle.getString("boton.generarInforme"));
        // MenuButton.setText(bundle.getString("boton.menu"));
        // helpButton.setText(bundle.getString("boton.ayuda"));
 
@@ -323,29 +322,33 @@ public class AlumnoController {
     @FXML
     private void modificarAlumno() {
         Alumno seleccionado = alumnosTable.getSelectionModel().getSelectedItem();
-        if (seleccionado != null) {
-            String dni = dniField.getText();
-            String nombre = nombreField.getText();
-            String apellido1 = apellido1Field.getText();
-            String apellido2 = apellido2Field.getText();
 
-            seleccionado.setDni(dni);
-            seleccionado.setNombre(nombre);
-            seleccionado.setApellido1(apellido1);
-            seleccionado.setApellido2(apellido2);
-
-            try {
-                alumnoDAO.modificarAlumno(seleccionado);
-                alumnosTable.refresh();
-            } catch (Exception e) {
-                mostrarAlerta("Error", "No se pudo modificar el alumno", e.getMessage(), Alert.AlertType.ERROR);
-            }
-
-            limpiarCampos();
-        } else {
+        if (seleccionado == null) {
             mostrarAlerta("Error", "Selección requerida", "Por favor selecciona un alumno para modificar.", Alert.AlertType.WARNING);
+            return;
         }
+
+        String dni = dniField.getText();
+        String nombre = nombreField.getText();
+        String apellido1 = apellido1Field.getText();
+        String apellido2 = apellido2Field.getText();
+
+        seleccionado.setDni(dni);
+        seleccionado.setNombre(nombre);
+        seleccionado.setApellido1(apellido1);
+        seleccionado.setApellido2(apellido2);
+
+        try {
+            alumnoDAO.modificarAlumno(seleccionado);
+            alumnosTable.refresh();
+            mostrarAlerta("Éxito", "Alumno modificado correctamente.", "", Alert.AlertType.INFORMATION);
+        } catch (Exception e) {
+            mostrarAlerta("Error", "No se pudo modificar el alumno", e.getMessage(), Alert.AlertType.ERROR);
+        }
+
+        limpiarCampos();
     }
+
 
     /**
      * Genera un informe de los alumnos utilizando JasperReports.

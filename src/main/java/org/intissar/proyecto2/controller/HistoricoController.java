@@ -130,6 +130,10 @@ public class HistoricoController {
             logger.error("Error al cargar el historial de préstamos:", e);
         }
     }
+    @FXML
+    private void abrirInformeHistorialPrestamos() {
+        InformesController.abrirInformeHistorialPrestamos();
+    }
 
     /**
      * Aplica los filtros especificados por el usuario y carga los datos del historial.
